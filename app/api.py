@@ -8,7 +8,7 @@ import uuid
 import json
 import atexit
 
-from DB.table_flask import db, Clients
+from app.DB.table_flask import db, Clients
 # from DB.tables import Clients
 
 from sqlalchemy import create_engine
@@ -257,7 +257,7 @@ def status():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(port=8000, debug=True)
 
 
 # {"id": "26c940a1-7228-4ea2-a3bc-e6460b172040", "amount": 500}
