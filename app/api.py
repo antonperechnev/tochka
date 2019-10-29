@@ -23,7 +23,7 @@ cache.init_app(app)
 Swagger(app)
 app.config['JSONIFY_PRETTYPRINT_REGULAR'] = True
 app.config['SQLALCHEMY_POOL_RECYCLE'] = 3600
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:Anton1995@localhost/tochka'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:tochkatest@localhost/tochka'
 
 db.init_app(app)
 
