@@ -11,25 +11,25 @@ services:
     depends_on:
       - app
       
-    app:
-      container_name: flask
-      build:
-        context: .
-        dockerfile: /opt/tochka/Docker/Python/Dockerfile
-      env_file: /opt/tochka/Docker/Postgres/db.conf
-      expose:
-        - 8000
-      depends_on:
-        - database
-        
-      database:
-        container_name: postgres
-        image: postgres:latest
-        env_file: /opt/tochka/Docker/Postgres/db.conf
-        ports: 
-          - 5432:5432
-        volumes:
-          - db_volume:/var/lib/postgresql
+  app:
+    container_name: flask
+    build:
+      context: .
+      dockerfile: /opt/tochka/Docker/Python/Dockerfile
+    env_file: /opt/tochka/Docker/Postgres/db.conf
+    expose:
+      - 8000
+    depends_on:
+      - database
+
+  database:
+    container_name: postgres
+    image: postgres:latest
+    env_file: /opt/tochka/Docker/Postgres/db.conf
+    ports: 
+      - 5432:5432
+    volumes:
+      - db_volume:/var/lib/postgresql
           
 volumes:
   db_volume:
