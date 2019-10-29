@@ -5,7 +5,7 @@ from sqlalchemy.dialects.postgresql import UUID
 import uuid
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:Anton1995@localhost/tochka'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:tochkatest@localhost/tochka'
 db = SQLAlchemy(app)#, session_options={'autocommit': True})
 
 
