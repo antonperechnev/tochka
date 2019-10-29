@@ -29,7 +29,7 @@ def addition_create(uuid='', fio='', balance='', user_status=''):
 
 def user_info_handler(user_info, user_id, amount=0, add=False, substract=False):
     description = {}
-    result =True
+    result = True
     try:
         user_status = user_info.status
         user_balance = user_info.balance
